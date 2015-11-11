@@ -33,7 +33,28 @@ public class funFacts extends AppCompatActivity {
                 //randomly select a fact
                 Random randomGenerator = new Random(); //construct a new random number generator
                 int randomNumber = randomGenerator.nextInt(3);
-                fact = randomNumber + "";
+
+                //if statement to convert randomNumber to fact
+                //if randomNumber is 0
+                if (randomNumber == 0)
+                {
+                    fact="ant stretch when they wake up in the morning";
+                }
+
+                else if (randomNumber == 1)
+                {
+                    fact="ostriches can run faster than horses";
+                }
+
+                else if (randomNumber == 2)
+                {
+                    fact="olympic gold medals are actually made mostly of silver";
+                }
+
+                else
+                {
+                    fact="sorry, there was an error";
+                }
 
                 //update the label with our dynamic fact
                 factLabelZ.setText(fact);
